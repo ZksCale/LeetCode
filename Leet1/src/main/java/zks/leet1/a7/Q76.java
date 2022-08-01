@@ -1,6 +1,10 @@
-package Q70;
+package zks.leet1.a7;
+
+
+import org.junit.jupiter.api.Test;
 
 import java.util.HashMap;
+import java.util.Map;
 
 /*
 76. 最小覆盖子串
@@ -39,28 +43,64 @@ s 和 t 由英文字母组成
 进阶：你能设计一个在 o(n) 时间内解决此问题的算法吗？
  */
 public class Q76 {
-    //动态维护一个滑动窗口,指针l和r指向这个窗口的头部和尾部,同时用一个哈希表维护窗口中包含的字母以及对应字母的个数
-    //要注意的是,只需要关心t中出现的集合,s中任何的t中未曾出现的字母都是无关紧要的,所以考虑对s进行预处理
-    //对于s中的每一个字母,如果它不存在与t中,将它置为' ',在窗口滑动时遇到空格直接跳过
-    //其次,由于是为了找最小的,在已经找到了一个答案时,如果l和r夹着的区域大于当前找到的最小答案,不用对它进行判断,因为就算它包含了t中元素,它也不是最小解
     public String minWindow(String s, String t) {
-        if (t.length() == 0) return "";
-        if (s.length() < t.length()) return "";
-        HashMap<Character, Integer> tMap = new HashMap<>();
+        //本题还是去看题解了, 本身想法有偏差,本打算用两个hash表比对, 确实存在问题
+        //题解:滑动窗口 lr两个指针, 判断两个指针之间的区间[l,r)是否包含t的全部字符,若包含,试图将l右移,若不包含,将r右移
+        //用变量ans记录下最短的子串,遍历结束后就是题解
+        int l = 0, r = 0;
+        HashMap<Character, Integer> tMap = new HashMap<Character, Integer>();
         for (int i = 0; i < t.length(); i++) {
-            char c = t.charAt(i);
-            if (tMap.containsKey(c)) {
-                tMap.put(c, tMap.get(c) + 1);
-            } else tMap.put(c, 1);
-        }//tMap中保存了字母以及对应的个数
-        //下面对s进行预处理
-        StringBuilder s0 = new StringBuilder(s);
-        for (int i = 0; i < s0.length(); i++) if (!tMap.containsKey(s0.charAt(i))) s0.setCharAt(i, ' ');
-        //下面使用滑动窗口遍历
-        int l = 0, r = 1;//窗口约定为区间[l.r)
-        HashMap<Character, Integer> sMap = new HashMap<>();
-        return "";
+            Character k = t.charAt(i);
+            if (tMap.containsKey(k)) tMap.put(k, tMap.get(k) + 1);
+            else tMap.put(k, 1);
+        }
+        HashMap<Character, Integer> sMap = new HashMap<Character, Integer>();
+        //r-l是子串的长度,如果子串的长度比t的长度更小,不需要考虑比对,一定不是子串
+        String ans = s + " ";
+        while (r <= s.length()) {
+            if (r - l >= t.length() && this.containsSubString(sMap, tMap)) {
+                if (r - l < ans.length()) ans = s.substring(l, r);
+                this.removeCharFromMap(sMap, s.charAt(l));
+                l++;
+            } else if (r < s.length()) {
+                this.addCharToMap(sMap, s.charAt(r));
+                r++;
+            } else r++;
+        }
+        if (ans.length() > s.length()) return "";
+        else return ans;
     }
 
+    //比对两个hashmap判断s中是否包含了t中的全部字符
+    private boolean containsSubString(HashMap<Character, Integer> sMap, HashMap<Character, Integer> tMap) {
+        for (Map.Entry<Character, Integer> entry : tMap.entrySet()) {
+            Character key = entry.getKey();
+            Integer value = entry.getValue();
+            if (!sMap.containsKey(key) || sMap.get(key) < value) return false;
+        }
+        return true;
+    }
 
+    private void addCharToMap(HashMap<Character, Integer> map, Character c) {
+        if (map.containsKey(c)) {
+            map.put(c, map.get(c) + 1);
+        } else {
+            map.put(c, 1);
+        }
+    }
+
+    private void removeCharFromMap(HashMap<Character, Integer> map, Character c) {
+        if (map.containsKey(c)) {
+            Integer v = map.get(c);
+            if (v == 1) map.remove(c);
+            else map.put(c, v - 1);
+        }
+    }
+
+    @Test
+    public void T76() {
+        String s="ADOBECODEBANC";
+        String t="ABC";
+        System.out.println(this.minWindow(s, t));
+    }
 }

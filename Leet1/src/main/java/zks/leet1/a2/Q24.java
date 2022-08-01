@@ -1,4 +1,4 @@
-package zks.leet1.a3;
+package zks.leet1.a2;
 
 /*
  * 24. 两两交换链表中的节点

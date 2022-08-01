@@ -1,4 +1,4 @@
-package Q70;
+package zks.leet1.a7;
 
 /*
 70. 爬楼梯

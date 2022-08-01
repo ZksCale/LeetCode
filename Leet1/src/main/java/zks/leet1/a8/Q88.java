@@ -1,4 +1,4 @@
-package zks.leet1;
+package zks.leet1.a8;
 
 /*
 88. 合并两个有序数组

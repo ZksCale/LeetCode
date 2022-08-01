@@ -1,4 +1,4 @@
-package zks.leet1.a2;
+package zks.leet1.a1;
 
 import java.util.LinkedList;
 

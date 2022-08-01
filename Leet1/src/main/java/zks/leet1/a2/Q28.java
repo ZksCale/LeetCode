@@ -1,4 +1,4 @@
-package zks.leet1.a3;
+package zks.leet1.a2;
 
 /*
  * 28. 实现 strStr()

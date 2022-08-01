@@ -1,6 +1,6 @@
-package zks.leet1.a4;
+package zks.leet1.a3;
 
-import org.jetbrains.annotations.NotNull;
+
 import org.junit.jupiter.api.Test;
 
 /*
@@ -38,7 +38,7 @@ public class Q32 {
     }
 
     //从左向右扫描,可以跳过),对于每一个'('都要求它的有效子串括号长度,当剩下的长度已经小于可能的结果时,可以直接返回
-    public int longestValidParentheses(@NotNull String s) {
+    public int longestValidParentheses( String s) {
         int ans = 0;
         for (int i = 0; i < s.length() - ans; i++) {
             if (s.charAt(i) == ')') continue;

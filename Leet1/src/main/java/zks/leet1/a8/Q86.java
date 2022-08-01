@@ -1,6 +1,7 @@
-package zks.leet1;
+package zks.leet1.a8;
 
 import org.junit.jupiter.api.Test;
+import zks.leet1.a9.ListNode;
 
 /*
 86. 分隔链表

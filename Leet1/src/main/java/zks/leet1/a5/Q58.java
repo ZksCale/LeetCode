@@ -1,4 +1,4 @@
-package zks.leet1.a6;
+package zks.leet1.a5;
 
 /*
 58. 最后一个单词的长度

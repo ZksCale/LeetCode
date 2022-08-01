@@ -1,18 +1,18 @@
-package zks.leet1;
+package zks.leet1.a9;
 
 //  Definition for singly-linked list.
 public class ListNode {
-    int val;
-    ListNode next;
+    public int val;
+    public ListNode next;
 
     ListNode() {
     }
 
-    ListNode(int val) {
+   public ListNode(int val) {
         this.val = val;
     }
 
-    ListNode(int... ints) {
+    public ListNode(int... ints) {
         this.val = ints[0];
         ListNode[] nodes = new ListNode[ints.length];
         nodes[0] = this;
@@ -22,7 +22,7 @@ public class ListNode {
         }
     }
 
-    ListNode(int val, ListNode next) {
+    public ListNode(int val, ListNode next) {
         this.val = val;
         this.next = next;
     }

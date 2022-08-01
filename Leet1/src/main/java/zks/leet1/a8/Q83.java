@@ -1,4 +1,6 @@
-package zks.leet1;
+package zks.leet1.a8;
+
+import zks.leet1.a9.ListNode;
 
 /*
 83. 删除排序链表中的重复元素

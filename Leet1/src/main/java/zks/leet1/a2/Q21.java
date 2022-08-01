@@ -1,4 +1,4 @@
-package zks.leet1.a3;
+package zks.leet1.a2;
 
 /*
  * 21. 合并两个有序链表

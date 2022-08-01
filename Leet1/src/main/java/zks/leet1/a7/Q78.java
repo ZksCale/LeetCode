@@ -1,10 +1,8 @@
-package zks.leet1;
+package zks.leet1.a7;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collections;
 import java.util.List;
-import java.util.stream.Collectors;
 
 /*
 78. 子集

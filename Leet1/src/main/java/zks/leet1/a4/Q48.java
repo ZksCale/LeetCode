@@ -1,4 +1,4 @@
-package zks.leet1.a5;
+package zks.leet1.a4;
 
 import org.junit.jupiter.api.Test;
 

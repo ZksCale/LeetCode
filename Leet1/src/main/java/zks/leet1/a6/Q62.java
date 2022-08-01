@@ -1,4 +1,4 @@
-package zks.leet1.a7;
+package zks.leet1.a6;
 
 import java.util.ArrayList;
 import java.util.Arrays;

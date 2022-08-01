@@ -1,4 +1,4 @@
-package zks.leet1.a3;
+package zks.leet1.a2;
 
 /*
  * 29. 两数相除

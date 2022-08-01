@@ -1,8 +1,6 @@
-package zks.leet1;
+package zks.leet1.a9;
 
 import org.junit.jupiter.api.Test;
-
-import java.util.List;
 
 /*
 92. 反转链表 II

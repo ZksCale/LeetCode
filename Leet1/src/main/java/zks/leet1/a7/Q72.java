@@ -1,4 +1,4 @@
-package Q70;
+package zks.leet1.a7;
 
 import java.util.Arrays;
 

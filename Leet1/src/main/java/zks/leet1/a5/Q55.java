@@ -1,4 +1,4 @@
-package zks.leet1.a6;
+package zks.leet1.a5;
 
 /*
 55. 跳跃游戏
