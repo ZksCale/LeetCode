@@ -1,7 +1,9 @@
+/*
 package zks.leet1.a6;
 
 import org.junit.jupiter.api.Test;
 
+*/
 /*
 67. 二进制求和
 给你两个二进制字符串，返回它们的和（用二进制表示）。
@@ -25,7 +27,8 @@ import org.junit.jupiter.api.Test;
 每个字符串仅由字符 '0' 或 '1' 组成。
 1 <= a.length, b.length <= 10^4
 字符串如果不是 "0" ，就都不含前导零。
- */
+ *//*
+
 public class Q67 {
 
     public String addBinary(String a, String b) {
@@ -72,3 +75,4 @@ public class Q67 {
         System.out.println(this.addBinary(a, b));
     }
 }
+*/

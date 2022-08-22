@@ -1,9 +1,11 @@
+/*
 package zks.leet1.a7;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+*/
 /*
 78. 子集
 给你一个整数数组 nums ，数组中的元素 互不相同 。返回该数组所有可能的子集（幂集）。
@@ -27,7 +29,8 @@ import java.util.List;
 1 <= nums.length <= 10
 -10 <= nums[i] <= 10
 nums 中的所有元素 互不相同
- */
+ *//*
+
 public class Q78 {
     //试图用更精简的代码实现:
     public List<List<Integer>> subsets(int[] nums){
@@ -82,3 +85,4 @@ public class Q78 {
         }
     }
 }
+*/

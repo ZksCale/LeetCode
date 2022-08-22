@@ -1,3 +1,4 @@
+/*
 package zks.leet1.a6;
 
 import org.junit.jupiter.api.Test;
@@ -5,6 +6,7 @@ import org.junit.jupiter.api.Test;
 import java.util.ArrayList;
 import java.util.List;
 
+*/
 /*
 68. 文本左右对齐
 给定一个单词数组 words 和一个长度 maxWidth ，重新排版单词，使其成为每行恰好有 maxWidth 个字符，且左右两端对齐的文本。
@@ -64,7 +66,8 @@ import java.util.List;
 words[i] 由小写英文字母和符号组成
 1 <= maxWidth <= 100
 words[i].length <= maxWidth
- */
+ *//*
+
 public class Q68 {
     public List<String> fullJustify(String[] words, int maxWidth) {
         ArrayList<String> ans = new ArrayList<>();
@@ -125,3 +128,4 @@ public class Q68 {
 
     }
 }
+*/
